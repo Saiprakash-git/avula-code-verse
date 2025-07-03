@@ -6,11 +6,11 @@ import { componentTagger } from "lovable-tagger";
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
  
-  base: '/avula-code-verse/', 
+  
   plugins: [
     react(),
   
-  ],
+  ],base: "/avula-code-verse/", 
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
