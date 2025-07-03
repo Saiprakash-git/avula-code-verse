@@ -5,16 +5,12 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  server: {
-    host: "::",
-    port: 8080,
-  },
+ 
   base: '/avula-code-verse/', 
   plugins: [
     react(),
-    mode === 'development' &&
-    componentTagger(),
-  ].filter(Boolean),
+  
+  ],
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
