@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Trophy, Award, Star, GraduationCap, Target, Medal } from 'lucide-react';
+import { Trophy, Award, Star, Medal } from 'lucide-react';
 
 const AchievementsSection: React.FC = () => {
   const achievements = [
@@ -11,22 +11,6 @@ const AchievementsSection: React.FC = () => {
       gradient: 'from-yellow-500 to-orange-500',
       category: 'Competition',
       highlight: 'Winner'
-    },
-    {
-      title: 'State-level Rank 146 in TS ECET 2024',
-      description: 'Achieved exceptional performance in Telangana State Engineering Common Entrance Test, ranking among top performers statewide',
-      icon: Target,
-      gradient: 'from-blue-500 to-purple-500',
-      category: 'Academic',
-      highlight: 'Rank 146'
-    },
-    {
-      title: 'Academic Excellence in Diploma',
-      description: 'Maintained outstanding academic performance throughout diploma program with consistent high grades',
-      icon: GraduationCap,
-      gradient: 'from-green-500 to-emerald-500',
-      category: 'Academic',
-      highlight: 'GPA: 9.47/10.0'
     },
     {
       title: 'MongoDB Associate Developer Certification',
@@ -46,7 +30,7 @@ const AchievementsSection: React.FC = () => {
             Achievements & Certifications
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Recognition for excellence in development, academics, and innovation
+            Recognition for excellence in development and innovation
           </p>
         </div>
 
@@ -96,17 +80,15 @@ const AchievementsSection: React.FC = () => {
         </div>
 
         {/* Stats Section */}
-        <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div className="mt-16 grid grid-cols-2 gap-8">
           {[
             { label: 'Competitions Won', value: '1+', icon: Medal },
-            { label: 'Certifications', value: '1+', icon: Award },
-            { label: 'GPA Achieved', value: '9.47/10', icon: GraduationCap },
-            { label: 'State Rank', value: '146', icon: Target }
+            { label: 'Certifications', value: '1+', icon: Award }
           ].map((stat, index) => (
             <div
               key={stat.label}
               className={`text-center glass rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 animate-fade-in`}
-              style={{ animationDelay: `${(index + 4) * 100}ms` }}
+              style={{ animationDelay: `${(index + 2) * 100}ms` }}
             >
               <stat.icon className="w-8 h-8 mx-auto mb-3 text-purple-400" />
               <div className="text-2xl font-bold mb-1">{stat.value}</div>

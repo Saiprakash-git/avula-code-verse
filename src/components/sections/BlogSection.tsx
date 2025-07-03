@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Calendar, Clock, ArrowRight, BookOpen, PenTool, Heart } from 'lucide-react';
+import { Calendar, Clock, ArrowRight } from 'lucide-react';
 
 const BlogSection: React.FC = () => {
   const featuredPost = {
@@ -9,7 +9,8 @@ const BlogSection: React.FC = () => {
     date: '2025-01-15',
     readTime: '8 min read',
     category: 'Achievement',
-    gradient: 'from-yellow-500 to-orange-500'
+    gradient: 'from-yellow-500 to-orange-500',
+    link: 'https://www.linkedin.com/posts/saiprakash001_codeforgood-jpmorganchase-hackathonwinner-activity-7345456153046269954-hKAu?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEsIQMkBdx0gDaz_y2aQYOQ4hHcUtgUbdlY'
   };
 
   return (
@@ -25,7 +26,7 @@ const BlogSection: React.FC = () => {
         </div>
 
         {/* Featured Blog Post */}
-        <div className="max-w-4xl mx-auto mb-12">
+        <div className="max-w-4xl mx-auto">
           <article className="glass rounded-3xl p-8 md:p-12 hover:bg-white/10 transition-all duration-500 hover:scale-105 animate-fade-in group cursor-pointer">
             <div className="mb-6">
               <span className={`px-4 py-2 text-sm font-medium bg-gradient-to-r ${featuredPost.gradient} text-white rounded-full`}>
@@ -58,57 +59,16 @@ const BlogSection: React.FC = () => {
               </div>
             </div>
 
-            <button className="flex items-center text-purple-400 hover:text-purple-300 font-medium text-lg transition-colors duration-300 group-hover:gap-3 gap-2">
+            <a 
+              href={featuredPost.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center text-purple-400 hover:text-purple-300 font-medium text-lg transition-colors duration-300 group-hover:gap-3 gap-2"
+            >
               Read Full Story
               <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
-            </button>
+            </a>
           </article>
-        </div>
-
-        {/* Blog Stats */}
-        <div className="grid grid-cols-3 gap-8 mb-12">
-          {[
-            { label: 'Articles', value: '1+', icon: BookOpen },
-            { label: 'Readers', value: '100+', icon: Heart },
-            { label: 'Topics', value: '3+', icon: PenTool }
-          ].map((stat, index) => (
-            <div
-              key={stat.label}
-              className={`text-center glass rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 animate-fade-in`}
-              style={{ animationDelay: `${(index + 1) * 100}ms` }}
-            >
-              <stat.icon className="w-8 h-8 mx-auto mb-3 text-purple-400" />
-              <div className="text-2xl font-bold mb-1">{stat.value}</div>
-              <div className="text-sm text-muted-foreground">{stat.label}</div>
-            </div>
-          ))}
-        </div>
-
-        {/* Featured Section */}
-        <div className="glass rounded-3xl p-8 md:p-12">
-          <div className="text-center mb-8">
-            <div className="p-4 rounded-2xl bg-gradient-to-r from-purple-500 to-blue-500 shadow-lg inline-block mb-4">
-              <PenTool className="w-8 h-8 text-white" />
-            </div>
-            <h3 className="text-3xl font-bold mb-4">Subscribe to My Blog</h3>
-            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              Stay updated with my latest thoughts on technology, development practices, 
-              career insights, and personal reflections on the journey of continuous learning.
-            </p>
-          </div>
-
-          <div className="max-w-md mx-auto">
-            <div className="flex gap-4">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-full focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-              />
-              <button className="glow-button px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-medium rounded-full hover:shadow-lg hover:shadow-purple-500/25 transition-all duration-300">
-                Subscribe
-              </button>
-            </div>
-          </div>
         </div>
       </div>
     </section>

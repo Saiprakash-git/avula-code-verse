@@ -1,5 +1,6 @@
+
 import React from 'react';
-import { Code, Database, Smartphone, Settings, Users, Lightbulb } from 'lucide-react';
+import { Code, Database, Smartphone, Settings, Lightbulb } from 'lucide-react';
 
 const SkillsSection: React.FC = () => {
   const skillCategories = [
@@ -26,12 +27,6 @@ const SkillsSection: React.FC = () => {
       icon: Settings,
       skills: ['GitHub', 'VS Code', 'MySQL', 'SQLite'],
       color: 'from-orange-500 to-red-500'
-    },
-    {
-      title: 'Soft Skills',
-      icon: Users,
-      skills: ['Leadership', 'Problem Solving', 'Communication'],
-      color: 'from-indigo-500 to-purple-500'
     }
   ];
 
@@ -47,7 +42,7 @@ const SkillsSection: React.FC = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8">
           {skillCategories.map((category, index) => (
             <div
               key={category.title}

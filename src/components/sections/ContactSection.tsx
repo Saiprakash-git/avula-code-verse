@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { Mail, Linkedin, Github, MapPin, Phone, Send, MessageSquare } from 'lucide-react';
+import { Mail, Linkedin, Github, MapPin, Send, MessageSquare } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 
 const ContactSection: React.FC = () => {
@@ -196,24 +196,6 @@ const ContactSection: React.FC = () => {
                     Available for remote work and local opportunities
                   </p>
                 </div>
-              </div>
-            </div>
-
-            <div className="glass rounded-3xl p-8">
-              <h3 className="text-2xl font-bold mb-4">Let's Build Something Amazing</h3>
-              <p className="text-muted-foreground leading-relaxed mb-6">
-                Whether you have a project in mind, want to discuss opportunities, 
-                or just want to connect with a fellow developer, I'd love to hear from you.
-              </p>
-              <div className="flex gap-4">
-                <a 
-                  href="https://drive.google.com/file/d/1YHcBFEucfoREpNV1cH5pHz4avXTZG1LX/view?usp=drive_link"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex-1 glow-button px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-medium rounded-lg hover:shadow-lg hover:shadow-purple-500/25 transition-all duration-300 text-center"
-                >
-                  Download Resume
-                </a>
               </div>
             </div>
           </div>
