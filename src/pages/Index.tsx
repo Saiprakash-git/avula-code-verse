@@ -1,13 +1,37 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import React from 'react';
+import { ThemeProvider } from '@/contexts/ThemeContext';
+import ThemeToggle from '@/components/ThemeToggle';
+import Navigation from '@/components/Navigation';
+import HeroSection from '@/components/sections/HeroSection';
+import SkillsSection from '@/components/sections/SkillsSection';
+import ProjectsSection from '@/components/sections/ProjectsSection';
+import ExperienceSection from '@/components/sections/ExperienceSection';
+import AchievementsSection from '@/components/sections/AchievementsSection';
+import BlogSection from '@/components/sections/BlogSection';
+import ContactSection from '@/components/sections/ContactSection';
+import Footer from '@/components/Footer';
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
+    <ThemeProvider>
+      <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
+        <ThemeToggle />
+        <Navigation />
+        
+        <main>
+          <HeroSection />
+          <SkillsSection />
+          <ProjectsSection />
+          <ExperienceSection />
+          <AchievementsSection />
+          <BlogSection />
+          <ContactSection />
+        </main>
+        
+        <Footer />
       </div>
-    </div>
+    </ThemeProvider>
   );
 };
 
