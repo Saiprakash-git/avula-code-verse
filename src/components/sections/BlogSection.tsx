@@ -6,8 +6,8 @@ const BlogSection: React.FC = () => {
   const featuredPost = {
     title: 'My Journey to Winning JPMC CodeForGood 2025',
     excerpt: 'Reflecting on the intense 24-hour hackathon experience, the challenges we faced, and how teamwork led us to victory.',
-    date: '2025-01-15',
-    readTime: '8 min read',
+    date: '2025-06-28',
+    readTime: '5 min read',
     category: 'Achievement',
     gradient: 'from-yellow-500 to-orange-500',
     link: 'https://www.linkedin.com/posts/saiprakash001_codeforgood-jpmorganchase-hackathonwinner-activity-7345456153046269954-hKAu?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEsIQMkBdx0gDaz_y2aQYOQ4hHcUtgUbdlY'
