@@ -1,6 +1,5 @@
-
 import React from 'react';
-import { Code, Database, Smartphone, Tool, Users, Lightbulb } from 'lucide-react';
+import { Code, Database, Smartphone, Settings, Users, Lightbulb } from 'lucide-react';
 
 const SkillsSection: React.FC = () => {
   const skillCategories = [
@@ -24,7 +23,7 @@ const SkillsSection: React.FC = () => {
     },
     {
       title: 'Tools & Platforms',
-      icon: Tool,
+      icon: Settings,
       skills: ['GitHub', 'VS Code', 'MySQL', 'SQLite'],
       color: 'from-orange-500 to-red-500'
     },
