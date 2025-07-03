@@ -1,14 +1,12 @@
-
 import React from 'react';
 import { ArrowDown, Download, Github, Linkedin, Mail } from 'lucide-react';
-
 const HeroSection: React.FC = () => {
   const scrollToNext = () => {
-    document.getElementById('skills')?.scrollIntoView({ behavior: 'smooth' });
+    document.getElementById('skills')?.scrollIntoView({
+      behavior: 'smooth'
+    });
   };
-
-  return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
+  return <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
       {/* Background Animation */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-500/30 rounded-full blur-3xl animate-pulse"></div>
@@ -20,9 +18,7 @@ const HeroSection: React.FC = () => {
           <div className="mb-8">
             <div className="w-32 h-32 mx-auto rounded-full bg-gradient-to-r from-purple-500 to-blue-500 p-1 animate-float">
               <div className="w-full h-full rounded-full bg-background flex items-center justify-center">
-                <span className="text-4xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                  SPA
-                </span>
+                <span className="text-4xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">ASP</span>
               </div>
             </div>
           </div>
@@ -41,46 +37,25 @@ const HeroSection: React.FC = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12 animate-slide-up delay-500">
-            <a 
-              href="https://drive.google.com/file/d/1YHcBFEucfoREpNV1cH5pHz4avXTZG1LX/view?usp=drive_link"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="glow-button px-8 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-medium rounded-full hover:shadow-lg hover:shadow-purple-500/25 transition-all duration-300 flex items-center gap-2"
-            >
+            <a href="https://drive.google.com/file/d/1YHcBFEucfoREpNV1cH5pHz4avXTZG1LX/view?usp=drive_link" target="_blank" rel="noopener noreferrer" className="glow-button px-8 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-medium rounded-full hover:shadow-lg hover:shadow-purple-500/25 transition-all duration-300 flex items-center gap-2">
               <Download className="w-4 h-4" />
               Download Resume
             </a>
             
-            <button 
-              onClick={scrollToNext}
-              className="px-8 py-3 glass hover:bg-white/10 font-medium rounded-full transition-all duration-300 flex items-center gap-2"
-            >
+            <button onClick={scrollToNext} className="px-8 py-3 glass hover:bg-white/10 font-medium rounded-full transition-all duration-300 flex items-center gap-2">
               Let's Connect
               <ArrowDown className="w-4 h-4" />
             </button>
           </div>
 
           <div className="flex justify-center gap-6 animate-slide-up delay-700">
-            <a 
-              href="mailto:tosaiprakash.asp@gmail.com"
-              className="p-3 glass hover:bg-white/10 rounded-full transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-purple-500/25"
-            >
+            <a href="mailto:tosaiprakash.asp@gmail.com" className="p-3 glass hover:bg-white/10 rounded-full transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-purple-500/25">
               <Mail className="w-5 h-5" />
             </a>
-            <a 
-              href="https://www.linkedin.com/in/saiprakash001/" 
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-3 glass hover:bg-white/10 rounded-full transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-blue-500/25"
-            >
+            <a href="https://www.linkedin.com/in/saiprakash001/" target="_blank" rel="noopener noreferrer" className="p-3 glass hover:bg-white/10 rounded-full transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-blue-500/25">
               <Linkedin className="w-5 h-5" />
             </a>
-            <a 
-              href="https://github.com/Saiprakash-git" 
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-3 glass hover:bg-white/10 rounded-full transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-gray-500/25"
-            >
+            <a href="https://github.com/Saiprakash-git" target="_blank" rel="noopener noreferrer" className="p-3 glass hover:bg-white/10 rounded-full transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-gray-500/25">
               <Github className="w-5 h-5" />
             </a>
           </div>
@@ -92,8 +67,6 @@ const HeroSection: React.FC = () => {
           <ArrowDown className="w-6 h-6" />
         </button>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default HeroSection;
