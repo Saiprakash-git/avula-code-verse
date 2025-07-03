@@ -3,32 +3,14 @@ import React from 'react';
 import { Calendar, Clock, ArrowRight, BookOpen, PenTool, Heart } from 'lucide-react';
 
 const BlogSection: React.FC = () => {
-  const blogPosts = [
-    {
-      title: 'My Journey to Winning JPMC CodeForGood 2025',
-      excerpt: 'Reflecting on the intense 24-hour hackathon experience, the challenges we faced, and how teamwork led us to victory.',
-      date: '2025-01-15',
-      readTime: '8 min read',
-      category: 'Achievement',
-      gradient: 'from-yellow-500 to-orange-500'
-    },
-    {
-      title: 'From Intern to Team Lead: Lessons Learned',
-      excerpt: 'Sharing insights from my Android development internship and the experience of leading a team of developers.',
-      date: '2024-05-20',
-      readTime: '6 min read',
-      category: 'Experience',
-      gradient: 'from-green-500 to-emerald-500'
-    },
-    {
-      title: 'Building MyAcademia: A Learning Management System',
-      excerpt: 'Deep dive into the technical challenges and solutions while developing a comprehensive LMS application.',
-      date: '2024-03-10',
-      readTime: '12 min read',
-      category: 'Technical',
-      gradient: 'from-blue-500 to-purple-500'
-    }
-  ];
+  const featuredPost = {
+    title: 'My Journey to Winning JPMC CodeForGood 2025',
+    excerpt: 'Reflecting on the intense 24-hour hackathon experience, the challenges we faced, and how teamwork led us to victory.',
+    date: '2025-01-15',
+    readTime: '8 min read',
+    category: 'Achievement',
+    gradient: 'from-yellow-500 to-orange-500'
+  };
 
   return (
     <section id="blog" className="section-padding bg-gradient-to-b from-background to-background/50">
@@ -42,61 +24,58 @@ const BlogSection: React.FC = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-          {blogPosts.map((post, index) => (
-            <article
-              key={post.title}
-              className={`glass rounded-2xl p-6 hover:bg-white/10 transition-all duration-500 hover:scale-105 animate-fade-in group cursor-pointer`}
-              style={{ animationDelay: `${index * 150}ms` }}
-            >
-              <div className="mb-4">
-                <span className={`px-3 py-1 text-xs font-medium bg-gradient-to-r ${post.gradient} text-white rounded-full`}>
-                  {post.category}
-                </span>
-              </div>
+        {/* Featured Blog Post */}
+        <div className="max-w-4xl mx-auto mb-12">
+          <article className="glass rounded-3xl p-8 md:p-12 hover:bg-white/10 transition-all duration-500 hover:scale-105 animate-fade-in group cursor-pointer">
+            <div className="mb-6">
+              <span className={`px-4 py-2 text-sm font-medium bg-gradient-to-r ${featuredPost.gradient} text-white rounded-full`}>
+                Featured • {featuredPost.category}
+              </span>
+            </div>
 
-              <h3 className="text-xl font-bold mb-3 group-hover:text-purple-400 transition-colors duration-300 line-clamp-2">
-                {post.title}
-              </h3>
+            <h3 className="text-3xl md:text-4xl font-bold mb-6 group-hover:text-purple-400 transition-colors duration-300">
+              {featuredPost.title}
+            </h3>
 
-              <p className="text-muted-foreground mb-6 leading-relaxed line-clamp-3">
-                {post.excerpt}
-              </p>
+            <p className="text-muted-foreground mb-8 text-lg leading-relaxed">
+              {featuredPost.excerpt}
+            </p>
 
-              <div className="flex items-center justify-between text-sm text-muted-foreground mb-4">
+            <div className="flex items-center justify-between text-sm text-muted-foreground mb-8">
+              <div className="flex items-center gap-6">
                 <div className="flex items-center">
-                  <Calendar className="w-4 h-4 mr-1" />
-                  {new Date(post.date).toLocaleDateString('en-US', { 
-                    month: 'short', 
+                  <Calendar className="w-4 h-4 mr-2" />
+                  {new Date(featuredPost.date).toLocaleDateString('en-US', { 
+                    month: 'long', 
                     day: 'numeric', 
                     year: 'numeric' 
                   })}
                 </div>
                 <div className="flex items-center">
-                  <Clock className="w-4 h-4 mr-1" />
-                  {post.readTime}
+                  <Clock className="w-4 h-4 mr-2" />
+                  {featuredPost.readTime}
                 </div>
               </div>
+            </div>
 
-              <button className="flex items-center text-purple-400 hover:text-purple-300 font-medium transition-colors duration-300 group-hover:gap-2 gap-1">
-                Read More
-                <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
-              </button>
-            </article>
-          ))}
+            <button className="flex items-center text-purple-400 hover:text-purple-300 font-medium text-lg transition-colors duration-300 group-hover:gap-3 gap-2">
+              Read Full Story
+              <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
+            </button>
+          </article>
         </div>
 
         {/* Blog Stats */}
         <div className="grid grid-cols-3 gap-8 mb-12">
           {[
-            { label: 'Articles', value: '12+', icon: BookOpen },
-            { label: 'Readers', value: '500+', icon: Heart },
-            { label: 'Topics', value: '8+', icon: PenTool }
+            { label: 'Articles', value: '1+', icon: BookOpen },
+            { label: 'Readers', value: '100+', icon: Heart },
+            { label: 'Topics', value: '3+', icon: PenTool }
           ].map((stat, index) => (
             <div
               key={stat.label}
               className={`text-center glass rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 animate-fade-in`}
-              style={{ animationDelay: `${(index + 3) * 100}ms` }}
+              style={{ animationDelay: `${(index + 1) * 100}ms` }}
             >
               <stat.icon className="w-8 h-8 mx-auto mb-3 text-purple-400" />
               <div className="text-2xl font-bold mb-1">{stat.value}</div>

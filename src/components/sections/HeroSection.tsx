@@ -41,10 +41,15 @@ const HeroSection: React.FC = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12 animate-slide-up delay-500">
-            <button className="glow-button px-8 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-medium rounded-full hover:shadow-lg hover:shadow-purple-500/25 transition-all duration-300 flex items-center gap-2">
+            <a 
+              href="https://drive.google.com/file/d/1YHcBFEucfoREpNV1cH5pHz4avXTZG1LX/view?usp=drive_link"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="glow-button px-8 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-medium rounded-full hover:shadow-lg hover:shadow-purple-500/25 transition-all duration-300 flex items-center gap-2"
+            >
               <Download className="w-4 h-4" />
               Download Resume
-            </button>
+            </a>
             
             <button 
               onClick={scrollToNext}
@@ -57,13 +62,13 @@ const HeroSection: React.FC = () => {
 
           <div className="flex justify-center gap-6 animate-slide-up delay-700">
             <a 
-              href="mailto:saiprakashavula@example.com"
+              href="mailto:tosaiprakash.asp@gmail.com"
               className="p-3 glass hover:bg-white/10 rounded-full transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-purple-500/25"
             >
               <Mail className="w-5 h-5" />
             </a>
             <a 
-              href="https://linkedin.com/in/sai-prakash-avula" 
+              href="https://www.linkedin.com/in/saiprakash001/" 
               target="_blank"
               rel="noopener noreferrer"
               className="p-3 glass hover:bg-white/10 rounded-full transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-blue-500/25"
@@ -71,7 +76,7 @@ const HeroSection: React.FC = () => {
               <Linkedin className="w-5 h-5" />
             </a>
             <a 
-              href="https://github.com/sai-prakash-avula" 
+              href="https://github.com/Saiprakash-git" 
               target="_blank"
               rel="noopener noreferrer"
               className="p-3 glass hover:bg-white/10 rounded-full transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-gray-500/25"

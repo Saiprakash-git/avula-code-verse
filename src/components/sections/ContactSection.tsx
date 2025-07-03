@@ -36,21 +36,21 @@ const ContactSection: React.FC = () => {
   const socialLinks = [
     {
       name: 'Email',
-      href: 'mailto:saiprakashavula@example.com',
+      href: 'mailto:tosaiprakash.asp@gmail.com',
       icon: Mail,
       gradient: 'from-red-500 to-pink-500',
-      description: 'saiprakashavula@example.com'
+      description: 'tosaiprakash.asp@gmail.com'
     },
     {
       name: 'LinkedIn',
-      href: 'https://linkedin.com/in/sai-prakash-avula',
+      href: 'https://www.linkedin.com/in/saiprakash001/',
       icon: Linkedin,
       gradient: 'from-blue-500 to-blue-600',
       description: 'Connect professionally'
     },
     {
       name: 'GitHub',
-      href: 'https://github.com/sai-prakash-avula',
+      href: 'https://github.com/Saiprakash-git',
       icon: Github,
       gradient: 'from-gray-600 to-gray-700',
       description: 'View my repositories'
@@ -206,9 +206,14 @@ const ContactSection: React.FC = () => {
                 or just want to connect with a fellow developer, I'd love to hear from you.
               </p>
               <div className="flex gap-4">
-                <button className="flex-1 glow-button px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-medium rounded-lg hover:shadow-lg hover:shadow-purple-500/25 transition-all duration-300">
+                <a 
+                  href="https://drive.google.com/file/d/1YHcBFEucfoREpNV1cH5pHz4avXTZG1LX/view?usp=drive_link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1 glow-button px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-medium rounded-lg hover:shadow-lg hover:shadow-purple-500/25 transition-all duration-300 text-center"
+                >
                   Download Resume
-                </button>
+                </a>
               </div>
             </div>
           </div>
