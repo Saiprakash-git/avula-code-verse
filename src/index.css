@@ -27,7 +27,7 @@
   }
 
   .light {
-    --background: 60 6% 97%;
+    --background: 60 100% 97%;
     --foreground: 240 10% 3.9%;
     --card: 60 6% 97%;
     --card-foreground: 240 10% 3.9%;
