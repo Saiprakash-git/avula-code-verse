@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowDown, Download, Github, Linkedin, Mail } from 'lucide-react';
+import { ArrowDown, Download, Github, Linkedin, Mail, Code } from 'lucide-react';
 const HeroSection: React.FC = () => {
   const scrollToNext = () => {
     document.getElementById('skills')?.scrollIntoView({
@@ -49,16 +49,25 @@ const HeroSection: React.FC = () => {
           </div>
 
           <div className="flex justify-center gap-6 animate-slide-up delay-700">
-            <a href="mailto:tosaiprakash.asp@gmail.com" className="p-3 glass hover:bg-white/10 rounded-full transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-purple-500/25">
-              <Mail className="w-5 h-5" />
-            </a>
-            <a href="https://www.linkedin.com/in/saiprakash001/" target="_blank" rel="noopener noreferrer" className="p-3 glass hover:bg-white/10 rounded-full transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-blue-500/25">
-              <Linkedin className="w-5 h-5" />
-            </a>
-            <a href="https://github.com/Saiprakash-git" target="_blank" rel="noopener noreferrer" className="p-3 glass hover:bg-white/10 rounded-full transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-gray-500/25">
-              <Github className="w-5 h-5" />
-            </a>
-          </div>
+  <a href="mailto:tosaiprakash.asp@gmail.com" className="p-3 glass hover:bg-white/10 rounded-full transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-purple-500/25">
+    <Mail className="w-5 h-5" />
+  </a>
+  <a href="https://www.linkedin.com/in/saiprakash001/" target="_blank" rel="noopener noreferrer" className="p-3 glass hover:bg-white/10 rounded-full transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-blue-500/25">
+    <Linkedin className="w-5 h-5" />
+  </a>
+  <a href="https://github.com/Saiprakash-git" target="_blank" rel="noopener noreferrer" className="p-3 glass hover:bg-white/10 rounded-full transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-gray-500/25">
+    <Github className="w-5 h-5" />
+  </a>
+ <a href="https://leetcode.com/Saiprakash_asp/" target="_blank" rel="noopener noreferrer" 
+  className="p-3 glass hover:bg-white/10 rounded-full transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-yellow-500/25">
+  <Code className="w-5 h-5" />
+</a>
+
+
+
+
+</div>
+
         </div>
       </div>
 
