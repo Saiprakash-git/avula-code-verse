@@ -219,7 +219,7 @@ const ContactSection: React.FC = () => {
                 <div>
                   <h4 className="font-semibold">Hyderabad, Telangana</h4>
                   <p className="text-sm text-muted-foreground">
-                    Available for remote work and local opportunities
+                    Available for remote work and local opportunities, feel free to reach out!
                   </p>
                 </div>
               </div>
